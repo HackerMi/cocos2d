@@ -1,0 +1,9 @@
+application windows are expected to have a root view controller错误解决
+
+修改 - (void) applicationDidFinishLaunching:(UIApplication*)application 方法controller调用
+
+    viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];   
+    [viewController setView:glView];
+    [window setRootViewController:viewController];
+	
+	或者拷贝RootViewController.h与RootViewController.m文件，并增加到响应的工程
